@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "pnpm dlx tailwindcss -i ./static/src/input.css -o ./static/src/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4",
+    "postcss": "^8.4.39",
+    "autoprefixer": "^10.4.19"
+  }
+}
