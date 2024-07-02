@@ -5,13 +5,17 @@
 <head>
    <meta charset="UTF-8">
    <title>Title</title>
-   <link href="{% static 'src/styles.css' %}" rel="stylesheet">
+   <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 </head>
 <body>
 {% for order in orders %}
-   <p class="text-2xl text-white font-normal">amount: {{ order.amount }}</p>
+   <p class="text-2xl text-fuchsia-600 font-normal">amount: {{ order.amount }}</p>
    <br>
 {% endfor %}
 
+
+<div class="flex justify-center items-center border border-gray-300 py-6">
+<p>hello</p>
+</div>
 </body>
 </html>
