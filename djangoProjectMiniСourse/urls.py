@@ -16,11 +16,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.routers import SimpleRouter
 
-from orders.views import orders_page
+from orders.views import orders_page, OrdersView
+
+router = SimpleRouter()
+router.register('api/orders', OrdersView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', orders_page),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
+
+urlpatterns += router.urls  # router.urls - список

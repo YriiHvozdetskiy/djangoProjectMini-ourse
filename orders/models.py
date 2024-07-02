@@ -5,6 +5,7 @@ from products.models import Product
 
 
 class SalesOrder(models.Model):
+    # fields:
     amount = models.IntegerField()
     description = models.CharField(max_length=255)
 
